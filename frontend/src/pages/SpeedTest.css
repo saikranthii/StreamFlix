@@ -1,0 +1,156 @@
+.speed-test {
+  background: #000000;
+  color: #ffffff;
+  min-height: 100vh;
+  padding: 70px 4% 20px;
+}
+
+.speed-test h1 {
+  font-size: 2.5rem;
+  color: #ff0000;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.speed-test p {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.speedometer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  background: #1a1a1a;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.speedometer svg {
+  width: 250px;
+  height: 250px;
+}
+
+.speedometer .gauge {
+  transition: stroke-dashoffset 1s ease-in-out;
+}
+
+.speedometer .download-gauge {
+  animation: fillGauge 3s linear;
+}
+
+.speedometer .upload-gauge {
+  animation: fillGauge 3s linear 1s; /* Delay for upload gauge */
+}
+
+.speedometer .needle {
+  transform-origin: 100px 100px;
+  animation: rotateNeedle 3s linear;
+}
+
+.speed-display {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  color: #ff0000;
+  text-align: center;
+}
+
+.speed-display span {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.metrics {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.metrics p {
+  font-size: 1rem;
+  color: #ffffff;
+  margin: 5px 0;
+}
+
+.speed-test button {
+  padding: 12px 24px;
+  background: #000000;
+  color: #ff0000;
+  border: 2px solid #ff0000;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  font-size: 1rem;
+}
+
+.speed-test button:disabled {
+  background: #666666;
+  color: #ffffff;
+  border: none;
+  cursor: not-allowed;
+}
+
+.speed-test button:hover:not(:disabled) {
+  background: #ff0000;
+  color: #000000;
+}
+
+.error {
+  color: #ff0000;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.chart-container {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.chart-container h3 {
+  font-size: 1.5rem;
+  color: #ff0000;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.history {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.history h3 {
+  font-size: 1.5rem;
+  color: #ff0000;
+  margin-bottom: 10px;
+}
+
+.history table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.history th,
+.history td {
+  padding: 10px;
+  border: 1px solid #ff0000;
+  text-align: center; /* Center-align for better readability */
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.history th {
+  background: #1a1a1a;
+  color: #ff0000;
+}
+
+@keyframes fillGauge {
+  0% { stroke-dashoffset: 439.8; }
+  100% { stroke-dashoffset: 0; }
+}
+
+@keyframes rotateNeedle {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

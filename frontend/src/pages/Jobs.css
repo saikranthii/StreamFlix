@@ -1,0 +1,55 @@
+.jobs {
+    background: #141414;
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 70px 4% 20px;
+  }
+  
+  .jobs h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .jobs p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .job-list {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .job h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .job .location {
+    font-size: 0.9rem;
+    color: #737373;
+    margin-bottom: 10px;
+  }
+  
+  .job p {
+    font-size: 1rem;
+  }
+  
+  .job button {
+    padding: 10px 20px;
+    background: #e50914;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .job button:hover {
+    background: #c40812;
+  }
+  
+  .error {
+    color: #e50914;
+  }

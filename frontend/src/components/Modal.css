@@ -1,0 +1,226 @@
+/* Modal container (overlay) */
+.modal {
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  max-height: 100vh;
+  background: #181818;
+  border-radius: 8px;
+  overflow-y: auto;
+  z-index: 2000;
+  padding: 0;
+}
+
+/* Modal content */
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+/* Close button */
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  color: #000000;
+}
+
+/* Poster wrapper */
+.modal__poster-wrapper {
+  position: relative;
+}
+
+/* Poster image */
+.modal__poster {
+  width: 250px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+/* Entire modal area setup */
+.modal-no-poster {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Make sure the container fills the modal */
+  background-color: #000;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Content wrapper - centers items */
+.modal-no-poster-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Large red initial letters */
+.modal-no-poster-content .modal-first-letters {
+  color: #d00000;
+  font-size: 3.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 110px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* "Oops! No poster found" message */
+.modal-no-poster-content .modal-no-poster-message {
+  color: #d00000;
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-top: 10px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  max-width: 250px;
+  width: 100%;
+}
+
+
+/* Details section */
+.modal-details {
+  padding: 0;
+  text-align: left;
+  flex: 1;
+  margin-top: 100px;
+}
+
+/* Title */
+.modal-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 10px;
+  color: #ffffff;
+}
+
+/* Description */
+.modal-description {
+  font-size: 1.1rem;
+  color: #d2d2d2;
+  margin: 0 0 20px;
+  line-height: 1.5;
+}
+
+/* Buttons container */
+.modal-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  margin: 10px 0 0;
+}
+
+/* Generic button styles */
+.btn {
+  padding: 8px 24px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: opacity 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+/* Play button */
+.play-btn {
+  background: #ffffff;
+  color: #000000;
+}
+
+/* Responsive: Tablets and below */
+@media (max-width: 768px) {
+  .modal-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal__poster-wrapper {
+    max-width: 200px;
+    max-height: 300px;
+    margin: 0 0 10px 0;
+  }
+
+  .modal__poster {
+    margin: 0; /* Remove side margins for smaller screens */
+  }
+
+  .modal-no-poster-content .modal-first-letters {
+    font-size: 2rem;
+  }
+
+  .modal-no-poster-content .modal-no-poster-message {
+    font-size: 0.7rem;
+    margin-top: 5px;
+  }
+
+  .modal-details {
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .modal-title {
+    font-size: 1.8rem;
+  }
+
+  .modal-description {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 6px 16px;
+    font-size: 1rem;
+  }
+}
+
+/* Responsive: Small phones */
+@media (max-width: 480px) {
+  .modal__poster-wrapper {
+    max-width: 150px;
+    max-height: 225px;
+  }
+
+  .modal-no-poster-content .modal-first-letters {
+    font-size: 1.5rem;
+  }
+
+  .modal-no-poster-content .modal-no-poster-message {
+    font-size: 0.6rem;
+    margin-top: 3px;
+  }
+
+  .modal-title {
+    font-size: 1.5rem;
+  }
+
+  .modal-description {
+    font-size: 0.8rem;
+  }
+
+  .btn {
+    padding: 5px 12px;
+    font-size: 0.9rem;
+  }
+}

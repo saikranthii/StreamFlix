@@ -1,0 +1,47 @@
+.audio-subtitles {
+    background: #141414;
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 70px 4% 20px;
+  }
+  
+  .audio-subtitles h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .audio-subtitles p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .audio-subtitles video {
+    margin-bottom: 20px;
+    border-radius: 4px;
+  }
+  
+  .settings {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .setting {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .setting label {
+    font-size: 1rem;
+  }
+  
+  .setting select {
+    padding: 8px;
+    font-size: 1rem;
+    border-radius: 4px;
+    background: #333;
+    color: #ffffff;
+    border: none;
+  }

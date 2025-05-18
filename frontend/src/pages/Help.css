@@ -1,0 +1,119 @@
+.help-page {
+  background: #141414;
+  color: #ffffff;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  text-align: left;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.help-page .help-container {
+  padding: 5px 4% 0px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 1;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+/* Headings and Text */
+.help-page h1,
+.help-page p {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+/* Search Bar */
+.help-page .search-bar {
+  max-width: 600px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.help-page .search-bar input {
+  width: 100%;
+  padding: 10px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  background: #333;
+  color: #fff;
+  border: none;
+}
+
+/* Scrollable FAQs */
+.help-page .faqs-scroll-container {
+  max-width: 800px;
+  width: 100%;
+  height: 45vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-right: 10px;
+  scroll-behavior: smooth;
+  align-items: flex-start;
+}
+
+/* Individual FAQ */
+.help-page .faq {
+  background: #1f1f1f;
+  padding: 12px 16px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+  width: 100%;
+  text-align: left;
+}
+
+.help-page .faq:hover {
+  background: #292929;
+}
+
+.help-page .faq h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.help-page .faq p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Error Message */
+.help-page .error {
+  color: #e50914;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+/* Scrollbar styling */
+.help-page .faqs-scroll-container {
+  max-height: 45vh;
+  overflow-y: auto;
+  padding-right: 10px;
+  scrollbar-width: thin;
+}
+
+.help-page .faqs-scroll-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.help-page .faqs-scroll-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+/* Footer styling - reduce gap to content */
+.help-page footer {
+  margin-top: -100px;
+  padding-top: 10px;
+  background: #111;
+  color: #ccc;
+  text-align: center;
+  font-size: 0.9rem;
+}

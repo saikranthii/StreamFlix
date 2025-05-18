@@ -1,0 +1,61 @@
+.legal-notices {
+  background: #141414;
+  color: #ffffff;
+  min-height: 100vh;
+  padding: 70px 4% 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.legal-notices h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #e50914;
+}
+
+/* Scrollable container for notices */
+.legal-container {
+  max-height: 60vh;
+  overflow-y: auto;
+  padding-right: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #e50914 #333;
+}
+
+/* Webkit scroll styling */
+.legal-container::-webkit-scrollbar {
+  width: 8px;
+}
+.legal-container::-webkit-scrollbar-thumb {
+  background-color: #e50914;
+  border-radius: 6px;
+}
+.legal-container::-webkit-scrollbar-track {
+  background-color: #333;
+}
+
+/* Individual notice box */
+.notice {
+  background: #222;
+  padding: 14px 20px;
+  border-radius: 6px;
+  margin-bottom: 14px;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.03);
+  transition: background-color 0.3s ease;
+}
+
+.notice:hover {
+  background-color: #2a2a2a;
+}
+
+.notice h3 {
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+  color: #e50914;
+}
+
+.notice p {
+  font-size: 0.95rem;
+  color: #dddddd;
+  line-height: 1.4;
+  margin: 0;
+}

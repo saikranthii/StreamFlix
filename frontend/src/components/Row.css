@@ -1,0 +1,126 @@
+/* Row Container */
+.row {
+  margin: 20px -20px;
+  padding: 0 20px; /* Applies 20px on left and right */
+  position: relative;
+  width: calc(100% + 20px); /* Subtracts 40px total padding from width */
+  overflow: hidden; /* Hide anything overflowing from the row */
+}
+
+/* Row title */
+.row-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  font-weight: 500;
+  color: #fff;
+}
+
+/* Wrapper for tiles */
+.tiles-wrapper {
+  overflow-x: auto; /* Enables horizontal scrolling */
+  overflow-y: hidden; /* Prevent vertical scrolling */
+  scroll-behavior: smooth;
+  -ms-overflow-style: none; /* Hide scrollbar for IE */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  padding-bottom: 20px; /* To ensure there’s space at the bottom */
+  padding-top: 20px;
+}
+
+/* Hide scrollbar */
+.tiles-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* Container for tiles (flex layout) */
+.tiles {
+  display: flex;
+  gap: 20px;
+  padding-left: 20px; /* Ensures the first tile is not touching the edge */
+  padding-right: 40px; /* Prevent clipping of the last card */
+  width: max-content; /* Ensure tiles layout is on one row */
+}
+
+/* Tile styling */
+.tile {
+  width: 200px !important;
+  flex-shrink: 0;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Tile hover effect */
+.tile:hover {
+  box-shadow: 0 0 0 4.5px #e50914, 0 0 8px 5px rgba(229, 9, 20, 0.5);
+}
+
+/* Arrow styling */
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: #ffffff;
+  font-size: 2.5rem;
+  width: 60px;  /* Reduced width */
+  height: 60px; /* Reduced height */
+  padding: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 1;
+  transition: opacity 0.3s, background-color 0.3s;
+  margin-top: 20px;
+}
+
+/* Hover effect for arrows */
+.slider-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.row:hover .slider-arrow {
+  opacity: 0.8;
+}
+
+/* Left and Right arrow positioning */
+.left-arrow {
+  left: 50px; /* Reduced left position */
+}
+
+.right-arrow {
+  right: 60px; /* Reduced right position */
+}
+
+.arrow-icon {
+  pointer-events: none;
+}
+
+/* Favorite button styling */
+.favorite-button {
+  background: none;
+  border: none;
+  padding: 5px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.favorite-button:hover {
+  color: #e50914;
+}
+
+.favorite-button.favorited {
+  background: none;
+  color: #e50914;
+}

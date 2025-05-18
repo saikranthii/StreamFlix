@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+.notifications {
+  background: #141414;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  padding-top: 120px; /* Account for fixed header */
+  padding-bottom: 80px; /* Account for footer */
+}
+
+.notifications-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.notifications-container h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.no-notifications {
+  font-size: 18px;
+  color: #e5e5e5;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.notifications-list {
+  list-style: none;
+  padding: 0;
+}
+
+.notification-card {
+  display: flex;
+  align-items: center;
+  background: rgba(20, 20, 20, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.notification-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(229, 9, 20, 0.5);
+}
+
+.notification-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  margin-right: 15px;
+  object-fit: cover;
+  border: 1px solid #e50914;
+}
+
+.notification-content {
+  flex: 1;
+}
+
+.notification-content h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 0 5px;
+  color: #ffffff;
+}
+
+.notification-content p {
+  font-size: 16px;
+  color: #e5e5e5;
+  margin: 0 0 10px;
+}
+
+.notification-date {
+  font-size: 14px;
+  color: #999;
+}
+
+@media (max-width: 768px) {
+  .notifications {
+    padding-top: 90px; /* Adjust for smaller header */
+  }
+
+  .notifications-container h1 {
+    font-size: 28px;
+  }
+
+  .notification-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .notification-image {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+
+  .notification-content h3 {
+    font-size: 18px;
+  }
+
+  .notification-content p {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,304 @@
+/* Import Poppins for general text and Montserrat for the title */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Montserrat:wght@700&display=swap');
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: #000000; /* solid black */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Keep for logo and profile section */
+  padding: 0 5%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.header.scrolled {
+  background: #000000;
+  backdrop-filter: blur(10px);
+  height: 80px;
+}
+
+.header .logo-container {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.header .logo {
+  width: 60px !important;
+  height: 60px !important;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-indent: -9999px;
+  animation: rotateLogo 5.5s infinite ease-in-out;
+}
+
+/* Logo rotation with zoom */
+@keyframes rotateLogo {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  4.55% {
+    transform: rotate(100deg) scale(1.2);
+  }
+  9.09% {
+    transform: rotate(0deg) scale(1);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+.header .logo-text {
+  margin-top: -10px;
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  position: relative;
+  width: 350px;
+  height: 70px;
+}
+
+.header .logo-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.header .svg-text {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-weight: 700;
+  font-size: 60px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/* Fallback text styling with gradient */
+.header .logo-fallback {
+  display: none;
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  background: linear-gradient(45deg, #FF4500, #4B0082);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #4B0082; /* Fallback color */
+}
+
+/* Initial gradient colors */
+.gradient-start {
+  stop-color: #FF4500;
+  animation: cycleStartColors 7.5s infinite linear;
+}
+
+.gradient-end {
+  stop-color: #4B0082;
+  animation: cycleEndColors 7.5s infinite linear;
+}
+
+/* Keyframes to cycle through start colors */
+@keyframes cycleStartColors {
+  0% {
+    stop-color: #FF4500; /* Orange Red */
+  }
+  33.33% {
+    stop-color: #FFD700; /* Gold */
+  }
+  66.66% {
+    stop-color: #228B22; /* Forest Green */
+  }
+  100% {
+    stop-color: #FF4500; /* Back to Orange Red */
+  }
+}
+
+/* Keyframes to cycle through end colors */
+@keyframes cycleEndColors {
+  0% {
+    stop-color: #4B0082; /* Indigo */
+  }
+  33.33% {
+    stop-color: #2F0047; /* Deep Purple */
+  }
+  66.66% {
+    stop-color: #FF1493; /* Deep Pink */
+  }
+  100% {
+    stop-color: #4B0082; /* Back to Indigo */
+  }
+}
+
+.header .nav {
+  display: flex;
+  align-items: center;
+  position: absolute; /* Center the nav */
+  left: 50%;
+  transform: translateX(-50%);
+  justify-content: center; /* Ensure nav links are centered within the nav container */
+  width: fit-content; /* Prevent stretching */
+}
+
+/* Fallback for older browsers */
+@supports not (transform: translateX(-50%)) {
+  .header .nav {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: fit-content;
+  }
+}
+
+.header .nav a {
+  color: #e5e5e5;
+  font-size: 18px; /* As set in the provided CSS */
+  font-weight: 400;
+  margin: 0 28px; /* As set in the provided CSS */
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.header .nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: #e50914;
+  transition: width 0.3s ease;
+}
+
+.header .nav a:hover::after,
+.header .nav a.active::after {
+  width: 100%;
+}
+
+.header .nav a:hover,
+.header .nav a.active {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.header .profile-section {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Explicitly set gap to 5px on desktop */
+}
+
+.header .profile-section .search-icon,
+.header .profile-section .bell-icon {
+  color: #ffffff;
+  font-size: 24px;
+  margin-right: 180px; /* Reduced to 5px to decrease the gap */
+  transition: color 0.3s ease, transform 0.3s ease;
+  margin-left: -140px;
+}
+
+.header .profile-section .search-icon:hover,
+.header .profile-section .bell-icon:hover {
+  color: #e50914;
+  transform: scale(1.2);
+}
+
+.header .profile-section .profile {
+  width: 36px;
+  height: 36px;
+  background: url('https://via.placeholder.com/36x36?text=P') no-repeat center;
+  background-size: cover;
+  border-radius: 6px;
+  border: 2px solid #e50914;
+  transition: transform 0.3s ease;
+}
+
+.header .profile-section .profile:hover {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    height: 70px;
+    padding: 0 3%;
+  }
+
+  .header.scrolled {
+    height: 60px;
+  }
+
+  .header .logo {
+    width: 80px !important;
+    height: 80px !important;
+  }
+
+  .header .logo-text {
+    width: 250px;
+    height: 50px;
+    margin-left: 10px;
+  }
+
+  .header .svg-text {
+    font-size: 38px;
+    letter-spacing: 2px;
+  }
+
+  .header .logo-fallback {
+    font-size: 38px;
+    letter-spacing: 2px;
+  }
+
+  .header .nav {
+    display: none; /* Hidden on mobile */
+  }
+
+  .header .profile-section {
+    gap: 0px; /* Already set to 0px for mobile */
+  }
+
+  .header .profile-section .search-icon,
+  .header .profile-section .bell-icon {
+    font-size: 20px;
+    margin-right: 0px; /* Already set to 0px for mobile */
+  }
+
+  .header .profile-section .profile {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (min-width: 769px) {
+  .header .nav {
+    display: flex;
+  }
+}
+
+/* Show fallback if SVG is not supported */
+@supports not (display: flex) {
+  .header .logo-svg {
+    display: none;
+  }
+  .header .logo-fallback {
+    display: block;
+  }
+}

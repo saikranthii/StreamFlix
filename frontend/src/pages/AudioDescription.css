@@ -1,0 +1,45 @@
+.audio-description {
+    background: #141414;
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 70px 4% 20px;
+  }
+  
+  .audio-description h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .audio-description p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .audio-description video {
+    margin-bottom: 20px;
+    border-radius: 4px;
+  }
+  
+  .setting {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 600px;
+  }
+  
+  .setting label {
+    font-size: 1rem;
+  }
+  
+  .audio-description button {
+    padding: 10px 20px;
+    background: #e50914;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .audio-description button:hover {
+    background: #c40812;
+  }

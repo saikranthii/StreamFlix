@@ -1,0 +1,147 @@
+.tile {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+/* Ensure the background image is applied for tiles without posters */
+.tile-no-poster {
+  background-color: #000; /* Fallback black background */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Container for the first letter and message */
+.tile-no-poster-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2; /* Ensure content is above the overlay */
+}
+
+/* Styling for the first letter */
+.tile-no-poster-content .tile-first-letter {
+  color: #d00000;
+  font-size: 3.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Styling for the "oops! no poster found" message */
+.tile-no-poster-content .tile-no-poster-message {
+  color: #d00000;
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-top: 10px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 150px; /* You can increase this to your desired width */
+}
+
+
+.tile:hover {
+  transform: scale(1.1);
+}
+
+.tile-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1; /* Ensure the overlay is below the first letter and message */
+}
+
+.tile:hover .tile-overlay {
+  opacity: 1;
+}
+
+.tile-title {
+  font-size: 1rem;
+  margin: 0 0 10px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.tile-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.tile-btn {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.tile-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.play {
+  /* No additional styling needed */
+}
+
+.info {
+  /* No additional styling needed */
+}
+
+/* Favorite button styling */
+.favorite-button {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  padding: 5px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background 0.3s;
+}
+
+.favorite-button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.favorite-button.favorited {
+  background: rgba(229, 9, 20, 0.8);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tile {
+    width: 150px;
+    height: 225px;
+  }
+
+  .tile-no-poster-content .tile-first-letter {
+    font-size: 2rem;
+  }
+
+  .tile-no-poster-content .tile-no-poster-message {
+    font-size: 0.7rem;
+    margin-top: 5px;
+  }
+}

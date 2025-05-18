@@ -1,0 +1,77 @@
+.ad-choices {
+  background: #141414;
+  color: #ffffff;
+  min-height: 100vh;
+  padding: 70px 4% 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+}
+
+.ad-choices main {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.ad-choices h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.ad-choices p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.settings-wrapper {
+  max-height: 60vh; /* Scrollable container height */
+  overflow-y: auto;
+  padding-right: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #e50914 #333;
+}
+
+/* Scrollbar for WebKit browsers */
+.settings-wrapper::-webkit-scrollbar {
+  width: 8px;
+}
+.settings-wrapper::-webkit-scrollbar-thumb {
+  background-color: #e50914;
+  border-radius: 6px;
+}
+.settings-wrapper::-webkit-scrollbar-track {
+  background-color: #333;
+}
+
+.setting {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 15px;
+  background: #1f1f1f;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
+  transition: background-color 0.3s ease;
+}
+
+.setting:hover {
+  background: #333333;
+}
+
+.setting label {
+  font-size: 1rem;
+  flex: 1;
+  cursor: pointer;
+  user-select: none;
+}
+
+.setting input {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.error {
+  color: #e50914;
+  margin-bottom: 20px;
+}
